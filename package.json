@@ -19,6 +19,7 @@
     "simple-icons": "^1.2.18"
   },
   "devDependencies": {
-    "nodemon": "^1.14.11"
+    "nodemon": "^1.14.11",
+    "prettier": "^1.19.1"
   }
 }

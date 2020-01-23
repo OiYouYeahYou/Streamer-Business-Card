@@ -1,5 +1,5 @@
-const cbHandler = ( c, ...p ) => typeof c === 'function' && c( ...p );
+const cbHandler = (c, ...p) => typeof c === 'function' && c(...p)
 
 module.exports = {
-	cbHandler
-};
+	cbHandler,
+}
