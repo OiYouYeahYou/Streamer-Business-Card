@@ -33,7 +33,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/svg/:name.svg', (req, res) => {
 	const icon = simpleIcons[req.params.name]
 
-	if (!icon) return res.status(404).send()
+	if (!icon) {
+	}
 
 	res.status(200)
 		.set('Content-Type', 'image/svg+xml')

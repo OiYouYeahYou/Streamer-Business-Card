@@ -29,9 +29,11 @@ myFunc()
 function myFunc(user = defaultUser, cb) {
 	const statusCache = cache[user]
 
-	if (!statusCache || statusCache.timeLimit < Date.now())
+	if (!statusCache || statusCache.timeLimit < Date.now()) {
 		requestMaker(user, cb)
-	else cbHandler(cb, statusCache.status)
+	} else {
+		cbHandler(cb, statusCache.status)
+	}
 }
 
 function requestMaker(user, cb) {
