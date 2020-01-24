@@ -1,7 +1,14 @@
 const yaml = require('js-yaml')
 const fs = require('fs')
 
-const config = yaml.safeLoad(fs.readFileSync('./config.yaml'))
+let config
+
+try {
+	config = yaml.safeLoad(fs.readFileSync('./config.yaml'))
+} catch (err) {
+	console.log("problem loading config file")
+	process.exit(1)
+}
 
 const defaultUser = config.user
 const title = config.title
